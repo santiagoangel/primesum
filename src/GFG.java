@@ -57,7 +57,7 @@ class GFG
     
     //Driver code
     public static void main(String[] args) {
-        int[] A = { 3,7,4,5 }; 
+        int[] A = { 4,7,4,5 }; 
         int n = A.length; 
     
         System.out.println(primeSubarrays(A, n)); 

@@ -7,22 +7,27 @@
 import java.util.Arrays;
 
 public class App {
+    int PRIMES=0;
     public static void main(String[] args) throws Exception {
         System.out.println("Lets's try:");
-        Integer question[] = new Integer[] { 3, 7, 4, 5 };
+        Integer question[] = new Integer[] { 4, 7, 4, 5 };
         App app = new App();
-        System.out.println("[3, 7, 4, 5 ]");
+        System.out.println("[4, 7, 4, 5 ]");
         System.out.println("numOfPossibleArrays: " + app.numOfPossibleArrays(question));
         System.out.println("");
         app.printSubArrays(question, 0, 0);
-        System.out.println("primes: " + app.numberOfPrimeArrays(question));
+        System.out.println("PRiMES: " + app.PRIMES);
+        app.PRIMES=0;
         System.out.println("");
         Integer question2[] = new Integer[] { 3, 8, 4, 5 };
         System.out.println("[3, 8, 4, 5 ]");
         System.out.println("numOfPossibleArrays: " + app.numOfPossibleArrays(question2));
         app.printSubArrays(question2, 0, 0);
         System.out.println("");
-        System.out.println("primes: " + app.numberOfPrimeArrays(question2));
+        System.out.println("PRiMES: " + app.PRIMES);
+
+    }
+    public App(){
 
     }
 
@@ -32,31 +37,7 @@ public class App {
         return numOfPossibleArrays;
     }
 
-    public int numberOfPrimeArrays(Integer input[]) {
-        int primes = 0;
-
-        for (int i = 0; i < input.length; i++) {
-
-            Integer current[] = new Integer[input.length - i];
-            System.arraycopy(input, i, current, 0, input.length - i);
-
-            int sum = 0;
-            for (Integer c : current) {
-                sum = sum + c;
-
-            }
-
-            if (isPrime(sum)) {
-                primes++;
-            }
-            if (isPrime(current[0])) {
-                primes++;
-            }
-            sum = 0;
-
-        }
-        return primes;
-    }
+    
 
     public boolean isPrime(Integer n) {
 
@@ -96,7 +77,8 @@ public class App {
             System.out.println(arr[end] + "]");
             sum = sum + arr[end];
             if (isPrime(sum)) {
-                System.out.println("" + sum + " is Prime");
+                System.out.println("" + sum + " is Prime *");
+                PRIMES++;
 
             }
             printSubArrays(arr, start + 1, end);
