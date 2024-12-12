@@ -5,44 +5,43 @@ Find the number of subarrays with a prime sum
 
 ```
 Lets's try:
-[3, 7, 4, 5 ]
+[4, 7, 4, 5 ]
 numOfPossibleArrays: 10
 
-[3]
-3 is Prime
-[3, 7]
-[7]
-7 is Prime
-[3, 7, 4]
-[7, 4]
-11 is Prime
 [4]
-[3, 7, 4, 5]
-19 is Prime
+[4, 7]
+11 is Prime *
+[7]
+7 is Prime *
+[4, 7, 4]
+[7, 4]
+11 is Prime *
+[4]
+[4, 7, 4, 5]
 [7, 4, 5]
 [4, 5]
 [5]
-5 is Prime
-primes: 5
+5 is Prime *
+PRiMES: 4
 
 [3, 8, 4, 5 ]
 numOfPossibleArrays: 10
 [3]
-3 is Prime
+3 is Prime *
 [3, 8]
-11 is Prime
+11 is Prime *
 [8]
 [3, 8, 4]
 [8, 4]
 [4]
 [3, 8, 4, 5]
 [8, 4, 5]
-17 is Prime
+17 is Prime *
 [4, 5]
 [5]
-5 is Prime
+5 is Prime *
 
-primes: 4
+PRiMES: 4
 ```
 
 ## Getting Started
